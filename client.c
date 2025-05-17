@@ -14,6 +14,9 @@ int int client()
 
 
   int result = connect(fd:socketFD, addr:&address, len:sizeof address);
+  
+  if (result == 0)
+    printf(format:"connection was successful\n");
 
   return 0;
 } 
