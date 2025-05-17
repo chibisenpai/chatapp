@@ -4,9 +4,16 @@
 
 int int client()
 {
-  struct(sockaddr_in address);
+  int socketFD = socket(domain: AF_INET, type: SOCK_STREAM, protocol: 0);
+  
+  struct sockaddr_in address;
+  address.sin_farmily = AF_INET;
+  address.sin_port = 2000;
+  address.sin_addr;
+  inet_pton(af: AF_INET,cp: ip, buf:&address.sin_addr.s_addr);
 
-  connect(socketFD,);
-/*lol*/
+
+  int result = connect(fd:socketFD, addr:&address, len:sizeof address);
+
   return 0;
-}t
+} 
