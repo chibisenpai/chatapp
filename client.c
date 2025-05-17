@@ -7,6 +7,6 @@ int int client()
   struct(sockaddr_in address);
 
   connect(socketFD,);
-
+/*lol*/
   return 0;
-}
+}t
